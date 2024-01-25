@@ -2,10 +2,10 @@ package com.aegis.service;
 
 import java.util.List;
 
-import com.aegis.entity.Product;
-import com.aegis.entity.User;
-import com.aegis.entity.UserPurchase;
-import com.aegis.entity.UserRole;
+import com.aegis.document.Product;
+import com.aegis.document.User;
+import com.aegis.document.UserPurchase;
+import com.aegis.document.UserRole;
 
 public interface IProductMgmtService {
 	public String saveUserRoleInfo(UserRole role);

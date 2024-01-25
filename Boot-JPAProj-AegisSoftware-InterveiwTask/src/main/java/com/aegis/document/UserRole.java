@@ -1,4 +1,4 @@
-package com.aegis.entity;
+package com.aegis.document;
 
 import java.io.Serializable;
 

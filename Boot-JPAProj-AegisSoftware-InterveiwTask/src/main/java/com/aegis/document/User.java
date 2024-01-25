@@ -1,4 +1,4 @@
-package com.aegis.entity;
+package com.aegis.document;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -12,32 +12,32 @@ import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 
-@Document(collection = "PRODUCT_TAB")
+@Document(collection = "USER_INFO")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @RequiredArgsConstructor
-public class Product implements Serializable {
+public class User implements Serializable {
 	@Id
 	@NonNull
-	private Integer productId;
+	private Integer userId;
 	@NonNull
-	private String productName;
+	private String firstName;
 	@NonNull
-	private String productDesc;
+	private String lastName;
 	@NonNull
-	private String productImg;
+	private LocalDate dob;
 	@NonNull
-	private Double productSellPrice;
+	private String emailId;
 	@NonNull
-	private Double productCostPrice;
+	private String mobileNo;
 	@NonNull
-	private Integer stockUnit;
+	private Double balance;
 	@NonNull
-	private LocalDate createDate;
+	private String password;
 	@NonNull
-	private Boolean isDeleted;
-	
-	private User createdByUser;
-	
+	private String addrs;
+
+	private UserRole userRole;
+
 }

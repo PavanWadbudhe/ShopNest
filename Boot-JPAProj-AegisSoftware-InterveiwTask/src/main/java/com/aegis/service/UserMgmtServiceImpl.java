@@ -6,11 +6,11 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.aegis.entity.Product;
-import com.aegis.entity.User;
-import com.aegis.entity.UserPurchase;
-import com.aegis.entity.UserRole;
 import com.aegis.repository.IUserRepository;
+import com.aegis.document.Product;
+import com.aegis.document.User;
+import com.aegis.document.UserPurchase;
+import com.aegis.document.UserRole;
 import com.aegis.repository.IProductRepository;
 import com.aegis.repository.IUserPurchaseRepository;
 import com.aegis.repository.IUserRoleRepository;
