@@ -141,6 +141,7 @@ public class AegisTaskTestRunner  implements CommandLineRunner{
 	            				while(true) {
 	            					System.out.println("********Choice**********");
 	            					System.out.println("\t1.Seller\n\t2.Buyer\n\t3.exit");
+	            					System.out.println("Enter the choice::");
 	            					switch(Integer.parseInt(sc.nextLine())) {
 	            					case 1:
 	            						pqr:
@@ -276,6 +277,7 @@ public class AegisTaskTestRunner  implements CommandLineRunner{
 	            							case 1:
 	            								System.out.println("Enter the ProductId ::");
 	            								int productId=Integer.parseInt(sc.nextLine().replace(" ", ""));
+	            								
 	            								System.out.println("How many items to buy ::");
 	            								int items=Integer.parseInt(sc.nextLine());
 	            								

@@ -117,14 +117,21 @@ public class UserMgmtServiceImpl implements IProductMgmtService {
 				Product prod=opt.get();
 				double sellPrice=prod.getProductSellPrice();
 				 stock=prod.getStockUnit();	
+				int userid=prod.getCreatedByUser().getUserId();
+				Optional<User> opt2=userRepo.findById(userid);
 				
 				if(balance >= sellPrice*item) {
 					if(stock>=item) {
 						user.setBalance(user.getBalance()-(sellPrice*item));
 						userRepo.save(user);
+						if(opt2.isPresent()) {
+							User prodUser=opt2.get();
+							prodUser.setBalance(prodUser.getBalance()+sellPrice*item);
+							userRepo.save(prodUser);
+						}
 						prod.setStockUnit(stock-item);
 						prodRepo.save(prod);
-						System.out.println("Product buyed successfully with Amount ::"+sellPrice);
+						System.out.println("Product buyed successfully with Amount ::"+sellPrice*item);
 						System.out.println("Remaining Amount ::"+user.getBalance());
 						
 					}else {
