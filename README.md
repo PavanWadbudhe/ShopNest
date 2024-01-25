@@ -2,6 +2,7 @@ I got a Task from a software company and I asked to complete these Task.
 I completed these task as a standalone application in Spring Boot framework i.e. Spring Boot Data JPA, Hibernate and MongoDB and I use Eclipse IDE as Build tool . 
 Project description is 
 Thera are 4 table i.e.User_Role table, User table, Product table and User_Purchase table.
+
 User Roles: [Buyer, Seller] 
 What needs to be implemented? 
 1) Create a registration form with following fields, and use proper validations only on 
